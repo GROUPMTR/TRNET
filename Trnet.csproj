@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA22EE1E-C853-40B1-A5C1-ED2B10300AC8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trnet</RootNamespace>
+    <AssemblyName>Trnet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Default.html" />
+    <Content Include="Default.json" />
+    <Content Include="favicon.ico" />
+    <Content Include="TrnetService.asmx" />
+    <Content Include="_IMAGE\4D.ico" />
+    <Content Include="_IMAGE\Action-red-flag-icon.png" />
+    <Content Include="_IMAGE\Actions-green-flag-icon.png" />
+    <Content Include="_IMAGE\Adex2015.ico" />
+    <Content Include="_IMAGE\Advantedge.ico" />
+    <Content Include="_IMAGE\bell.png" />
+    <Content Include="_IMAGE\bug.png" />
+    <Content Include="_IMAGE\ClearDecisions.ico" />
+    <Content Include="_IMAGE\Clients-icon.png" />
+    <Content Include="_IMAGE\cloud-reload-icon.png" />
+    <Content Include="_IMAGE\cloud-sync-icon.png" />
+    <Content Include="_IMAGE\coins.png" />
+    <Content Include="_IMAGE\Competitive.ico" />
+    <Content Include="_IMAGE\house.png" />
+    <Content Include="_IMAGE\iconexe.ico" />
+    <Content Include="_IMAGE\IMS.ico" />
+    <Content Include="_IMAGE\Info-icon.png" />
+    <Content Include="_IMAGE\InfoSys.ico" />
+    <Content Include="_IMAGE\Karma.ico" />
+    <Content Include="Themes\Application.mixin.theme" />
+    <Content Include="Themes\RibbonBar.mixin.theme" />
+    <None Include="_IMAGE\logogrm.png" />
+    <Content Include="_IMAGE\Medplan.png" />
+    <Content Include="_IMAGE\Microsoft-Info-icon.png" />
+    <Content Include="_IMAGE\Numbers-1-icon.png" />
+    <Content Include="_IMAGE\Numbers-2-icon.png" />
+    <Content Include="_IMAGE\Numbers-3-icon.png" />
+    <Content Include="_IMAGE\Numbers-4-icon.png" />
+    <Content Include="_IMAGE\OK.png" />
+    <Content Include="_IMAGE\pause.png" />
+    <Content Include="_IMAGE\payments-icon.png" />
+    <Content Include="_IMAGE\personal.png" />
+    <Content Include="_IMAGE\Play-icon.png" />
+    <Content Include="_IMAGE\RamExplorer.ico" />
+    <Content Include="_IMAGE\Remind.ico" />
+    <Content Include="_IMAGE\stamp-icon.png" />
+    <Content Include="_IMAGE\Stop-Ok.png" />
+    <Content Include="_IMAGE\Study.ico" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\MailSend.cs" />
+    <Compile Include="App_Code\ConvertToPdf.cs" />
+    <Compile Include="App_Code\Mecra.cs" />
+    <Compile Include="App_Code\Musteri.cs" />
+    <Compile Include="App_Code\PazarlamaSirketi.cs" />
+    <Compile Include="App_Code\Talep_Bilgisi.cs" />
+    <Compile Include="App_Code\OnayIslemleri.cs" />
+    <Compile Include="App_Code\Kullanici.cs" />
+    <Compile Include="APP_Menu\MyButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APP_Menu\MyButton.Designer.cs">
+      <DependentUpon>MyButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP_Menu\VButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APP_Menu\VButtons.Designer.cs">
+      <DependentUpon>VButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DASHBOARD\DASBOARD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DASHBOARD\DASBOARD.Designer.cs">
+      <DependentUpon>DASBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTER\COZUMLER\COZUMLER_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENVANTER\COZUMLER\COZUMLER_LISTESI.Designer.cs">
+      <DependentUpon>COZUMLER_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTER\HARDVARE\ENVANTER_LIST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENVANTER\HARDVARE\ENVANTER_LIST.Designer.cs">
+      <DependentUpon>ENVANTER_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTER\SOFTWARE\TOOLS_ADD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENVANTER\SOFTWARE\TOOLS_ADD.Designer.cs">
+      <DependentUpon>TOOLS_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENVANTER\SOFTWARE\TOOLS_LIST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENVANTER\SOFTWARE\TOOLS_LIST.Designer.cs">
+      <DependentUpon>TOOLS_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\HESAP_ACILIS_PLANI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\HESAP_ACILIS_PLANI.Designer.cs">
+      <DependentUpon>HESAP_ACILIS_PLANI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\CARI_GUNCELLE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ERP\CARI_GUNCELLE.Designer.cs">
+      <DependentUpon>CARI_GUNCELLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLOW\ONAY_GRUPLARI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FLOW\ONAY_GRUPLARI.Designer.cs">
+      <DependentUpon>ONAY_GRUPLARI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLOW\ONAY_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FLOW\ONAY_LISTESI.Designer.cs">
+      <DependentUpon>ONAY_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLOW\ORGANIZASYON_SEMASI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FLOW\ORGANIZASYON_SEMASI.Designer.cs">
+      <DependentUpon>ORGANIZASYON_SEMASI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\APPLICATION_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\APPLICATION_TALEP.Designer.cs">
+      <DependentUpon>APPLICATION_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\CIKIS_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\CIKIS_FORMU.Designer.cs">
+      <DependentUpon>CIKIS_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\FILE_VIEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\FILE_VIEW.Designer.cs">
+      <DependentUpon>FILE_VIEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\GIRIS_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\GIRIS_FORMU.Designer.cs">
+      <DependentUpon>GIRIS_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\IBM_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\IBM_TALEP.Designer.cs">
+      <DependentUpon>IBM_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\IDARI_ISLER_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\IDARI_ISLER_TALEP.Designer.cs">
+      <DependentUpon>IDARI_ISLER_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\ISE_GIRIS_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\ISE_GIRIS_FORMU.Designer.cs">
+      <DependentUpon>ISE_GIRIS_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\IT_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\IT_TALEP.Designer.cs">
+      <DependentUpon>IT_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\IZIN_TALEP_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\IZIN_TALEP_FORMU.Designer.cs">
+      <DependentUpon>IZIN_TALEP_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\LOKASYON_FORMAT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\LOKASYON_FORMAT.Designer.cs">
+      <DependentUpon>LOKASYON_FORMAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\LOKASYON_FORMAT_EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\LOKASYON_FORMAT_EKLE.Designer.cs">
+      <DependentUpon>LOKASYON_FORMAT_EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MAAS_AVAS_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MAAS_AVAS_TALEP.Designer.cs">
+      <DependentUpon>MAAS_AVAS_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MASRAF_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MASRAF_FORMU.Designer.cs">
+      <DependentUpon>MASRAF_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MASRAF_FORMU_EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MASRAF_FORMU_EKLE.Designer.cs">
+      <DependentUpon>MASRAF_FORMU_EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MECRA_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MECRA_TALEP.Designer.cs">
+      <DependentUpon>MECRA_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_AHB_ORANLARI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_AHB_ORANLARI.Designer.cs">
+      <DependentUpon>MUSTERI_AHB_ORANLARI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_FORMU.Designer.cs">
+      <DependentUpon>MUSTERI_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_FORMUS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_FORMUS.Designer.cs">
+      <DependentUpon>MUSTERI_FORMUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_TALEP.Designer.cs">
+      <DependentUpon>MUSTERI_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_TALEP_OLD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\MUSTERI_TALEP_OLD.Designer.cs">
+      <DependentUpon>MUSTERI_TALEP_OLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\OUTDOOR_FORMAT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\OUTDOOR_FORMAT.Designer.cs">
+      <DependentUpon>OUTDOOR_FORMAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\PAZARLAMA_STI_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\PAZARLAMA_STI_TALEP.Designer.cs">
+      <DependentUpon>PAZARLAMA_STI_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\PAZARLAMA_STI_TALEP_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\PAZARLAMA_STI_TALEP_FORMU.Designer.cs">
+      <DependentUpon>PAZARLAMA_STI_TALEP_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\PAZARLAMA_STI_TALEP_GIRIS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\PAZARLAMA_STI_TALEP_GIRIS.Designer.cs">
+      <DependentUpon>PAZARLAMA_STI_TALEP_GIRIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\SATIN_ALMA_FORMU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\SATIN_ALMA_FORMU.Designer.cs">
+      <DependentUpon>SATIN_ALMA_FORMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\SATIN_ALMA_FORMU_EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\SATIN_ALMA_FORMU_EKLE.Designer.cs">
+      <DependentUpon>SATIN_ALMA_FORMU_EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\SOZLESME_TALEP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\SOZLESME_TALEP.Designer.cs">
+      <DependentUpon>SOZLESME_TALEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\TEDARIKCI_TALEBI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\TEDARIKCI_TALEBI.Designer.cs">
+      <DependentUpon>TEDARIKCI_TALEBI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\TEDARIKCI_TALEP_FORMUS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\TEDARIKCI_TALEP_FORMUS.Designer.cs">
+      <DependentUpon>TEDARIKCI_TALEP_FORMUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\TESLIM_TUTANAGI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\TESLIM_TUTANAGI.Designer.cs">
+      <DependentUpon>TESLIM_TUTANAGI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMLAR\TourPanel1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMLAR\TourPanel1.Designer.cs">
+      <DependentUpon>TourPanel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KULLANICI\KULLANICI_BILGILERI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KULLANICI\KULLANICI_BILGILERI.Designer.cs">
+      <DependentUpon>KULLANICI_BILGILERI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KULLANICI\KULLANICI_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KULLANICI\KULLANICI_LISTESI.Designer.cs">
+      <DependentUpon>KULLANICI_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\LOKASYON_FORMAT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISTELER\LOKASYON_FORMAT.Designer.cs">
+      <DependentUpon>LOKASYON_FORMAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\MECRA_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISTELER\MECRA_LISTESI.Designer.cs">
+      <DependentUpon>MECRA_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\MUSTERI_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISTELER\MUSTERI_LISTESI.Designer.cs">
+      <DependentUpon>MUSTERI_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\PAZARLAMA_STI_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISTELER\PAZARLAMA_STI_LISTESI.Designer.cs">
+      <DependentUpon>PAZARLAMA_STI_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\SOZLESME_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISTELER\SOZLESME_LISTESI.Designer.cs">
+      <DependentUpon>SOZLESME_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\TEDARIKCI_LISTESI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISTELER\TEDARIKCI_LISTESI.Designer.cs">
+      <DependentUpon>TEDARIKCI_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\TICKET_RAPORLARI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LISTELER\TICKET_RAPORLARI.Designer.cs">
+      <DependentUpon>TICKET_RAPORLARI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTELER\_POPUP_LISTELER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISTELER\_POPUP_LISTELER.Designer.cs">
+      <DependentUpon>_POPUP_LISTELER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MUTABAKAT\BA_MUTABAKAT_CREATE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MUTABAKAT\BA_MUTABAKAT_CREATE.Designer.cs">
+      <DependentUpon>BA_MUTABAKAT_CREATE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MUTABAKAT\BS_MUTABAKAT_CREATE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MUTABAKAT\BS_MUTABAKAT_CREATE.Designer.cs">
+      <DependentUpon>BS_MUTABAKAT_CREATE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MUTABAKAT\MUTABAKAT_LISTESI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MUTABAKAT\MUTABAKAT_LISTESI.Designer.cs">
+      <DependentUpon>MUTABAKAT_LISTESI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MUTABAKAT\MUTABAKAT_YONETIMI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MUTABAKAT\MUTABAKAT_YONETIMI.Designer.cs">
+      <DependentUpon>MUTABAKAT_YONETIMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourPanel1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TourPanel1.Designer.cs">
+      <DependentUpon>TourPanel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MASTERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MASTERS.Designer.cs">
+      <DependentUpon>_MASTERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="REMIND\TELEVIZYON.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="REMIND\TELEVIZYON.Designer.cs">
+      <DependentUpon>TELEVIZYON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrnetService.asmx.cs">
+      <DependentUpon>TrnetService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TALEPLER\MAIL_TEST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TALEPLER\MAIL_TEST.Designer.cs">
+      <DependentUpon>MAIL_TEST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TALEPLER\TALEPLER_YONETIMI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TALEPLER\TALEPLER_YONETIMI.Designer.cs">
+      <DependentUpon>TALEPLER_YONETIMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TALEPLER\TALEP_ISLEMLERI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TALEPLER\TALEP_ISLEMLERI.Designer.cs">
+      <DependentUpon>TALEP_ISLEMLERI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TALEPLER\TALEP_ONAY_DURUMU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TALEPLER\TALEP_ONAY_DURUMU.Designer.cs">
+      <DependentUpon>TALEP_ONAY_DURUMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TALEPLER\TALEP_ONAY_EKRANI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TALEPLER\TALEP_ONAY_EKRANI.Designer.cs">
+      <DependentUpon>TALEP_ONAY_EKRANI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TIMESHEET\TIME_SHEET_ONAY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TIMESHEET\TIME_SHEET_ONAY.Designer.cs">
+      <DependentUpon>TIME_SHEET_ONAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TIMESHEET\TIME_SHEET_RAPOR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TIMESHEET\TIME_SHEET_RAPOR.Designer.cs">
+      <DependentUpon>TIME_SHEET_RAPOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_LOGIN.Designer.cs">
+      <DependentUpon>_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MASTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MASTER.Designer.cs">
+      <DependentUpon>_MASTER.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wisej.Core" />
+    <Reference Include="Wisej.Ext.ElegantIcons, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Wisej.Ext.ElegantIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisej.Ext.MaterialDesign, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Wisej.Ext.MaterialDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisej.Ext.ModernUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Wisej.Ext.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisej.Web" />
+    <Reference Include="Wisej.Web.Ext.ChartJS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL" />
+    <Reference Include="Wisej.Web.Ext.JustGage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL" />
+    <Reference Include="Wisej.Web.Ext.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Wisej.Web.Ext.Notification.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisej.Web.Ext.RibbonBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Wisej.Web.Ext.RibbonBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisej.Web.Ext.TourPanel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP_Menu\MyButton.resx">
+      <DependentUpon>MyButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP_Menu\VButtons.resx">
+      <DependentUpon>VButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DASHBOARD\DASBOARD.resx">
+      <DependentUpon>DASBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENVANTER\COZUMLER\COZUMLER_LISTESI.resx">
+      <DependentUpon>COZUMLER_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENVANTER\HARDVARE\ENVANTER_LIST.resx">
+      <DependentUpon>ENVANTER_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENVANTER\SOFTWARE\TOOLS_ADD.resx">
+      <DependentUpon>TOOLS_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENVANTER\SOFTWARE\TOOLS_LIST.resx">
+      <DependentUpon>TOOLS_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\HESAP_ACILIS_PLANI.resx">
+      <DependentUpon>HESAP_ACILIS_PLANI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP\CARI_GUNCELLE.resx">
+      <DependentUpon>CARI_GUNCELLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLOW\ONAY_GRUPLARI.resx">
+      <DependentUpon>ONAY_GRUPLARI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLOW\ONAY_LISTESI.resx">
+      <DependentUpon>ONAY_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLOW\ORGANIZASYON_SEMASI.resx">
+      <DependentUpon>ORGANIZASYON_SEMASI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\APPLICATION_TALEP.resx">
+      <DependentUpon>APPLICATION_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\CIKIS_FORMU.resx">
+      <DependentUpon>CIKIS_FORMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\FILE_VIEW.resx">
+      <DependentUpon>FILE_VIEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\GIRIS_FORMU.resx">
+      <DependentUpon>GIRIS_FORMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\IBM_TALEP.resx">
+      <DependentUpon>IBM_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\IDARI_ISLER_TALEP.resx">
+      <DependentUpon>IDARI_ISLER_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\ISE_GIRIS_FORMU.resx">
+      <DependentUpon>ISE_GIRIS_FORMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\IT_TALEP.resx">
+      <DependentUpon>IT_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\IZIN_TALEP_FORMU.resx">
+      <DependentUpon>IZIN_TALEP_FORMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\LOKASYON_FORMAT.resx">
+      <DependentUpon>LOKASYON_FORMAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\LOKASYON_FORMAT_EKLE.resx">
+      <DependentUpon>LOKASYON_FORMAT_EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MAAS_AVAS_TALEP.resx">
+      <DependentUpon>MAAS_AVAS_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MASRAF_FORMU.resx">
+      <DependentUpon>MASRAF_FORMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MASRAF_FORMU_EKLE.resx">
+      <DependentUpon>MASRAF_FORMU_EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MECRA_TALEP.resx">
+      <DependentUpon>MECRA_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MUSTERI_AHB_ORANLARI.resx">
+      <DependentUpon>MUSTERI_AHB_ORANLARI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MUSTERI_FORMUS.resx">
+      <DependentUpon>MUSTERI_FORMUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MUSTERI_TALEP.resx">
+      <DependentUpon>MUSTERI_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\MUSTERI_TALEP_OLD.resx">
+      <DependentUpon>MUSTERI_TALEP_OLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\OUTDOOR_FORMAT.resx">
+      <DependentUpon>OUTDOOR_FORMAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\PAZARLAMA_STI_TALEP.resx">
+      <DependentUpon>PAZARLAMA_STI_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\PAZARLAMA_STI_TALEP_FORMU.resx">
+      <DependentUpon>PAZARLAMA_STI_TALEP_FORMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\PAZARLAMA_STI_TALEP_GIRIS.resx">
+      <DependentUpon>PAZARLAMA_STI_TALEP_GIRIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\SATIN_ALMA_FORMU.resx">
+      <DependentUpon>SATIN_ALMA_FORMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\SATIN_ALMA_FORMU_EKLE.resx">
+      <DependentUpon>SATIN_ALMA_FORMU_EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\SOZLESME_TALEP.resx">
+      <DependentUpon>SOZLESME_TALEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\TEDARIKCI_TALEBI.resx">
+      <DependentUpon>TEDARIKCI_TALEBI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\TEDARIKCI_TALEP_FORMUS.resx">
+      <DependentUpon>TEDARIKCI_TALEP_FORMUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\TESLIM_TUTANAGI.resx">
+      <DependentUpon>TESLIM_TUTANAGI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMLAR\TourPanel1.resx">
+      <DependentUpon>TourPanel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KULLANICI\KULLANICI_BILGILERI.resx">
+      <DependentUpon>KULLANICI_BILGILERI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KULLANICI\KULLANICI_LISTESI.resx">
+      <DependentUpon>KULLANICI_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\LOKASYON_FORMAT.resx">
+      <DependentUpon>LOKASYON_FORMAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\MECRA_LISTESI.resx">
+      <DependentUpon>MECRA_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\MUSTERI_LISTESI.resx">
+      <DependentUpon>MUSTERI_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\PAZARLAMA_STI_LISTESI.resx">
+      <DependentUpon>PAZARLAMA_STI_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\SOZLESME_LISTESI.resx">
+      <DependentUpon>SOZLESME_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\TEDARIKCI_LISTESI.resx">
+      <DependentUpon>TEDARIKCI_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\TICKET_RAPORLARI.resx">
+      <DependentUpon>TICKET_RAPORLARI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTELER\_POPUP_LISTELER.resx">
+      <DependentUpon>_POPUP_LISTELER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MUTABAKAT\BA_MUTABAKAT_CREATE.resx">
+      <DependentUpon>BA_MUTABAKAT_CREATE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MUTABAKAT\BS_MUTABAKAT_CREATE.resx">
+      <DependentUpon>BS_MUTABAKAT_CREATE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MUTABAKAT\MUTABAKAT_LISTESI.resx">
+      <DependentUpon>MUTABAKAT_LISTESI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MUTABAKAT\MUTABAKAT_YONETIMI.resx">
+      <DependentUpon>MUTABAKAT_YONETIMI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MASTERS.resx">
+      <DependentUpon>_MASTERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REMIND\TELEVIZYON.resx">
+      <DependentUpon>TELEVIZYON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TALEPLER\MAIL_TEST.resx">
+      <DependentUpon>MAIL_TEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TALEPLER\TALEPLER_YONETIMI.resx">
+      <DependentUpon>TALEPLER_YONETIMI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TALEPLER\TALEP_ISLEMLERI.resx">
+      <DependentUpon>TALEP_ISLEMLERI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TALEPLER\TALEP_ONAY_DURUMU.resx">
+      <DependentUpon>TALEP_ONAY_DURUMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TALEPLER\TALEP_ONAY_EKRANI.resx">
+      <DependentUpon>TALEP_ONAY_EKRANI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TIMESHEET\TIME_SHEET_ONAY.resx">
+      <DependentUpon>TIME_SHEET_ONAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TIMESHEET\TIME_SHEET_RAPOR.resx">
+      <DependentUpon>TIME_SHEET_RAPOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_LOGIN.resx">
+      <DependentUpon>_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MASTER.resx">
+      <DependentUpon>_MASTER.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="UnityObjects">
+      <Guid>{51F6657D-9972-45FD-8D5D-98849802A9C9}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1738/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

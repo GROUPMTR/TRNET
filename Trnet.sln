@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trnet", "Trnet\Trnet.csproj", "{BA22EE1E-C853-40B1-A5C1-ED2B10300AC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{2F9BEAC2-F76E-49E5-BF7F-5C4335004E1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA22EE1E-C853-40B1-A5C1-ED2B10300AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA22EE1E-C853-40B1-A5C1-ED2B10300AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA22EE1E-C853-40B1-A5C1-ED2B10300AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA22EE1E-C853-40B1-A5C1-ED2B10300AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9BEAC2-F76E-49E5-BF7F-5C4335004E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9BEAC2-F76E-49E5-BF7F-5C4335004E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9BEAC2-F76E-49E5-BF7F-5C4335004E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9BEAC2-F76E-49E5-BF7F-5C4335004E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87A4D865-4E52-4B36-8C18-F76A8F42CFAE}
+	EndGlobalSection
+EndGlobal
